@@ -65,10 +65,6 @@
 \newcommand{\code}[1]{\colorbox{light-gray}{\parbox{0.9\textwidth}{\texttt{\small{#1}}}}}
 
 
-%\title{Université de Genève\vspace{10mm}\\ \noindent\rule{14cm}{0.5 pt}\vspace{0.5cm}\\TP3 EVE Online\\ \noindent\rule{14cm}{0.5 pt}\vspace{0.5cm}\vspace{10mm}}
-%\date{02-10-2017}
-%\author{\vspace{110mm}Eliott JOHNSON \& Carmelo Mileto}
-
 
 % définition du style des pages pour l'entête et les pieds de pages
 \usepackage{fancyhdr}
@@ -114,7 +110,7 @@
 %----------------------------------------------------------------------------------------
 
 \HRule \\[0.4cm]
-{ \huge \bfseries TP4 Temps de vie et Flux des muons}\\[0.4cm] % Title of your document
+{ \huge \bfseries Temps de vie et flux des muons cosmiques}\\[0.4cm] % Title of your document
 \HRule \\[1.5cm]
  
 %----------------------------------------------------------------------------------------
@@ -149,7 +145,7 @@ A. \textsc{Bravard}, E. \textsc{Zaffaroni}
 %	LOGO SECTION
 %----------------------------------------------------------------------------------------
 
-%%\includegraphics[width=10cm]{logouni.png}\\[1cm] % Include a department/university logo - this will require the graphicx package
+\includegraphics[width=10cm]{Images/logos/physique_logo.png}\\[1cm] % Include a department/university logo - this will require the graphicx package
  
 %----------------------------------------------------------------------------------------
 
@@ -171,9 +167,7 @@ A. \textsc{Bravard}, E. \textsc{Zaffaroni}
 
 \begin{abstract}
 
-La plupart des particules observées en dehors de notre atmosphère ont été crées par des sources galactiques, voir extra-galactiques. Si leurs énergies dépassent le  keV, celles-ci vont alors heurter la terre. Nous parlons ici de la terre en tant que masse terrestre et non atmosphère captive. La plupart des rayons cosmiques sont de nature hadronique et donc sensitif à l'interaction forte. L'atmosphère terrestre est alors un vrai champ de mine pour ces particules qui sont susceptible d'interagir à tout moment produisant des gerbes de particules neutres et chargées. Puis, à leur tour interagissent résultant en une pléthore de mésons chargées avec des temps de vie court qui éventuellement se désintègrent en énormément de muons de hautes énergies. 
-
-À la surface de la terre, nous sommes bombardés par des muons de charges positive et négative avec un taux d'environ une particule par \si{\cm\squared\per\min}. Dans cette expérience, nous allons nous intéresser à  ces particules qui nous bombardent, les muons, et nous allons mesurer leurs temps de vie et leurs flux.
+La plupart des particules observées en dehors de notre atmosphère ont été crées par des sources galactiques, voir extra-galactiques. Si leurs énergies dépassent le  keV, celles-ci vont alors heurter la terre. La plupart des rayons cosmiques sont de nature hadronique et donc sensitif à l'interaction forte. L'atmosphère terrestre est alors un vrai champ de mine pour ces particules qui sont susceptible d'interagir à tout moment produisant des gerbes de particules neutres et chargées. Puis, à leur tour interagissent résultant en une pléthore de mésons chargées avec des temps de vie court qui éventuellement se désintègrent en énormément de muons de hautes énergies. À la surface de la terre, nous sommes bombardés par des muons de charges positive et négative avec un taux d'environ une particule par \si{\cm\squared\per\min}. Dans cette expérience, nous allons nous intéresser à  ces particules cosmiques et nous allons mesurer leurs temps de vie et leurs flux.
 
 \end{abstract}
 
@@ -197,27 +191,17 @@ La désintégration de particules est un processus poissonnien, ainsi la probabi
 P(t) = e^{-t/\gamma\tau}
 \end{equation}
 
-où $\tau$  est le temps de vie de la particule (au repos), et $\gamma = \frac{1}{\sqrt{1-v^2/c^2}}$ est le facteur de Lorentz de la particule \cite{noauthor_particle_2019}. La valeur du temps de vie du muon selon le PDG (Particle Data Group)\cite{PhysRevD.98.030001} est: \[\tau = 2.1969811\pm0.0000022\cdot10^{-6} \text{s}\]
-Le muon va se désintégrer soit en électron, soit en positron dépendant de sa charge initial ainsi que en deux neutrinos. Par exemple:
-\begin{equation}
-\mu^{+}\to e^{+}+\nu_{e}+\overline{\nu_{\mu}}
-\end{equation}
-
-
-\subsubsection{Désintégration des muons négatifs}
-
-Le temps de vie des muons négatifs dans la matière est différent que le temps de vie des muons négatifs dans le vide car les muons négatifs interagissent avec le noyau des atomes. Dans le vide, les muons négatifs se désintègre de la manière suivante: 
-
+où $\tau$  est le temps de vie de la particule (au repos), et $\gamma = \frac{1}{\sqrt{1-v^2/c^2}}$ est le facteur de Lorentz de la particule \cite{noauthor_particle_2019}. La valeur du temps de vie du muon selon le PDG (Particle Data Group)\cite{PhysRevD.98.030001} est: \[\tau = 2.1969811\pm0.0000022\cdot10^{-6} \text{ s}\]
+Le muon va se désintégrer soit en électron, soit en positron dépendant de sa charge initial ainsi que en deux neutrinos.
+\[\mu^{+}\to e^{+}+\nu_{e}+\overline{\nu_{\mu}} \]
 \[ \mu^{-} \rightarrow e^{-} + \Bar{\nu}_{e} + \nu_{\mu} \]
 
-Le ratio entre le temps de vie du muon et de l'anti-muon est environ de 1 ce qui signifie que pour nous, nous pouvons considérer qu'ils ont le même temps de vie \cite{haxton_symmetries_1995}.
-\[\frac{\tau^{+}_{\mu}}{\tau^{-}_{\mu}}=1.000024\pm0.000078\]
-Ainsi dans le vide, le temps de vie du muon positif et négatif sont égal et donc satisfont l'invariance CPT.
 
+\subsubsection{Temps de vie des muons négatif dans la matière}
 
-\subsubsection{Temps de vie des muons négatif}
-
-Le muon positif n'intéragis pas avec les protons contenus dans les noyaux du matériel utilisé. En revanche les muons négatifs interagissent et peuvent donc être capturés. Le temps de vie total des muons négatifs est donc modifié. On le défini $\tau_{total}^{-}$. Il est égal au le temps de vie d'un muon dans une désintégration libre, $\tau_{decay}^{-}$. On y ajoute le temps de vie d'un  muon négatif traversant un atome jusqu'à sa capture, dénoté  $\tau_{capture}^{-}$. La relation entre ces trois termes: 
+Le ratio entre le temps de vie du muon et de l'anti-muon \textbf{dans le vide} est environ de 1 ce qui signifie que pour nous, nous pouvons considérer qu'ils ont le même temps de vie \cite{haxton_symmetries_1995}.
+\[\frac{\tau^{+}_{\mu}}{\tau^{-}_{\mu}}=1.000024\pm7.8\times10^{-5}\]
+Ainsi dans le vide, le temps de vie du muon positif et négatif sont égal et donc satisfont l'invariance CPT. Cependant, le temps de vie des muons négatifs \textbf{dans la matière} est différent que le temps de vie des muons négatifs dans le vide car les muons négatifs interagissent avec le noyau des atomes et peuvent être capturés. Le temps de vie total des muons négatifs est donc modifié. On le défini $\tau_{total}^{-}$. Il est égal au le temps de vie d'un muon dans une désintégration libre, $\tau_{decay}^{-}$. On y ajoute le temps de vie d'un  muon négatif traversant un atome jusqu'à sa capture, dénoté  $\tau_{capture}^{-}$. La relation entre ces trois termes: 
 
 \begin{equation}
     \frac{1}{\tau_{total}^{-}} = \frac{1}{\tau_{decay}^{-}} + \frac{1}{\tau_{capture}^{-}}
@@ -243,7 +227,7 @@ La dépendance en puissance de 4 du numéro atomique est une bonne approximation
 \begin{table}[htbp]
   \centering
   \captionsetup{width=0.9\textwidth}
-  \caption{\textit{Temps de vie des muons positifs et négatifs dans différents matériaux. Le temps de vie des muons positifs est tout le temps 2.2 $\mu s$, alors que le temps de vie des muons négatifs dépends du nombre atomique Z \cite{tamamushi_lifetime_nodate}.}}
+  \caption{Temps de vie des muons positifs et négatifs dans différents matériaux. Le temps de vie des muons positifs est tout le temps 2.2 \SIUnitSymbolMicro s, alors que le temps de vie des muons négatifs dépends du nombre atomique Z \cite{tamamushi_lifetime_nodate}.}
   \scalebox{1.0}{
     \begin{tabular}{lccc}
     Matériaux & \multicolumn{1}{l}{Z} & \multicolumn{1}{l}{Temps de vie du $\mu+$ ($\mu s$)} & \multicolumn{1}{l}{Temps de vie du $\mu^{-}$ ($\mu s$)} \\
@@ -266,13 +250,11 @@ Durant cette expérience nous nous attendons donc à pouvoir mesurer $\tau_{tota
 
 \subsubsection{Hélicité}
 
-Un petit rappel sur l'hélicité: on considère une hélicité droitière H$=+1$ si le vecteur vitesse et spin sont dans la même direction et gauchère H$=-1$ si ils sont inversé. L'interaction faible crée en forte probabilité des particules gauchère et des antiparticules droitière. Les muons sont crée par les rayons cosmiques et en particulier les pions. Un exemple de désintégration pour le pion positif: $\pi_{+}\rightarrow\nu_{\mu}+\mu^{+}$. Les muons que l'on détectent au sol ont un vecteur vitesse qui pointe vers le bas, ainsi les neutrinos associé ont leur vecteur vitesse qui point vers le haut, voir la Fig. \ref{fig:Helicite}. Les neutrinos, avec une masse très petite, sont toujours gauchères mais par conservation du spin le muon positif (antiparticule) doit être gaucher ce qui n'est pas son hélicité préférée mais est rendu possible par sa masse élevée. Le muon positif avec un spin Up peut maintenant se désintégrer dans la plaque de nôtre expérience. Il peut alors émettre un positron vers le haut ou vers le bas comme on peut voir sur la Fig. \ref{HelicitéElecUpDown}. Par conservation de spin si le positron vas vers le haut alors il sera droitier ce qui est favorable pour une antiparticule et gaucher si il vas vers le bas ce qui est défavorable. Pour la désintégration du muon négatif, l'effet sera le même et on s'attend donc à avoir plus de détection vers le haut que pour vers le bas.
-
-
+Un petit rappel sur l'hélicité: on considère une hélicité droitière H$=+1$ si le vecteur vitesse et spin sont dans la même direction (projection du spin sur la quantité de mouvement positive) et gauchère H$=-1$ si ils sont inversé (projection du spin sur la quantité de mouvement négative). L'interaction faible crée en forte probabilité des particules gauchère et des antiparticules droitière (analogie au neutrino LH et antineutrino RH). Les muons sont crée par les rayons cosmiques et en particulier les pions. Un exemple de désintégration pour le pion positif est la désintégration du pion positif $\pi_{+}\rightarrow\nu_{\mu}+\mu^{+}$. Les muons que l'on détecte au sol ont un vecteur vitesse qui pointe vers le bas, ainsi les neutrinos associé ont leur vecteur vitesse qui point vers le haut, voir la Fig. \ref{fig:Helicite}. Les neutrinos, avec une masse très petite, sont toujours gauchères mais par conservation du spin le muon positif (antiparticule) doit être gaucher ce qui n'est pas son hélicité préférée mais est rendu possible par sa masse élevée. Le muon positif avec un spin Up peut maintenant se désintégrer dans la plaque de nôtre expérience. Il peut alors émettre un positron vers le haut ou vers le bas. Par conservation du spin, si le positron vas vers le haut alors il sera droitier ce qui est favorable pour une antiparticule et gaucher si il vas vers le bas ce qui est défavorable, voir les Fig. \ref{fig:HeliciteElecUp} et \ref{fig:HeliciteElecDown} respectivement. Pour la désintégration du muon négatif, l'effet sera le même et on s'attend donc à avoir plus de détection vers le haut que pour vers le bas.
 
 \begin{figure}[htpb!]
     \centering
-    \includegraphics[width=0.4\textwidth]{Images/Photos/Helicite.jpg}
+    \includegraphics[width=0.45\textwidth]{Images/Photos/Helicite.jpg}
     \caption{Spin des produits de la désintégration du pion positif.}
     \label{fig:Helicite}
 \end{figure}
@@ -281,13 +263,13 @@ Un petit rappel sur l'hélicité: on considère une hélicité droitière H$=+1$
 \centering  
     \begin{subfigure}[t]{.45\textwidth}
     \includegraphics[width=.9\textwidth]{Images/Photos/HeliciteElecUp.jpg}
-    \captionsetup{width=0.8\textwidth}
+    \captionsetup{width=0.9\textwidth}
     \caption{Hélicité si l'électron vas vers le haut.}
     \label{fig:HeliciteElecUp}
     \end{subfigure}
     \begin{subfigure}[t]{.45\textwidth}
     \includegraphics[width=.9\textwidth]{Images/Photos/HeliciteElecDown.jpg}
-    \captionsetup{width=0.8\textwidth}
+    \captionsetup{width=0.9\textwidth}
     \caption{Hélicité si l'électron vas vers le bas.}
     \label{fig:HeliciteElecDown}
     \end{subfigure}
@@ -295,26 +277,52 @@ Un petit rappel sur l'hélicité: on considère une hélicité droitière H$=+1$
 \label{HelicitéElecUpDown}
 \end{figure}
 
+\newpage
+
 \subsubsection{Extrapolation du temps de vie du muon négatif}
 
-Pour l'acquisition des données expérimentale, nous ne pouvons pas faire la différence entre les muons négatifs et les muons positifs. En effet, nous mesurons seulement le nombre total de désintégration et donc $\tau_{\text{total}}$. Ainsi, pour extraire les temps de vie des muons positif $\tau^{+}_{\mu}$ et négatif $\tau^{-}_{\mu}$ il faut procéder en deux étapes. D'abord faire une régression exponentielle sur une région ou il n'y a pas de muons négatif. Cette région vas dépendre du matériaux qui vas capturer nos muons et donc il faut se référer à la Table \ref{tab:LifetimeinMaterial}. Dans tous les cas, les muons négatifs seront plus petits que 2.2 $\mu s$ donc la première régression exponentielle pourra être faire de 3 à 12 $\mu s$ par exemple avec la régression suivante:
+Pour l'acquisition des données expérimentale, nous ne pouvons pas faire la différence entre les muons négatifs et les muons positifs. En effet, nous mesurons seulement le nombre total de désintégrations et donc $\tau_{\text{total}}$. Ainsi, pour extraire les temps de vie des muons positif $\tau^{+}_{\mu}$ et du muon négatif $\tau^{-}_{\mu}$, il faut procéder en deux étapes. D'abord faire une régression de type exponentielle sur une région ou il n'y a pas de muons négatif. Cette région vas dépendre du matériaux qui vas capturer nos muons et donc il faut se référer à la Table \ref{tab:LifetimeinMaterial}. Dans tous les cas, le temps de vie des muons négatifs sera plus petit que 2.2 \SIUnitSymbolMicro s. Une première régression exponentielle pourra alors être réalisée, par exemple de 3 à 12 \SIUnitSymbolMicro s, en utilisant la régression suivante:
+\[ N(t) = N_{+}e^{\frac{-t}{\tau_{+}}}+C \]
+Une fois $N_{+}$ et $\tau+$ extrait on peut réaliser une deuxième régression exponentielle afin de trouver les valeurs qui caractérisent les muons négatifs en utilisant:
+\[ N(t) = N_{+}e^{\frac{-t}{\tau_{+}}}+N_{-}e^{\frac{-t}{\tau_{-}}}+C \]
+Notons que dans cette deuxième fit, les valeurs $N_{+}$ ainsi que $\tau_{+}$ sont considérées comme constante. La différence entre le premier fit et le deuxième est l'ensemble sur lequel est appliqué le fit. 
 
-\[ N(t) = N_{+}e^{-\frac{t}{\tau+}}+C \]
 
-Une fois le temps de vie et l'amplitude $N_{+}$ et $\tau+$ extraite on peut extraire les valeurs pour les muons négatifs en utilisant:
-
-\[ N(t) = N_{+}e^{-\frac{t}{\tau+}}+N_{-}e^{-\frac{t}{\tau-}}+C \]
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Démarche et installation %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Démarche expérimentale}
 
-Notre installation est composée de quatre modules comprenant chacun un scintillateur organique, un guide de lumière et un photo-multiplicateur. Un scintillateur est un matériel qui absorbe l'énergie d'une particule ionisante et la réémet sous forme de lumière. Parfois, l'état excité est méta-stable, c'est-à-dire que la période de relaxation de l'état excité à un état au repos est retardée (de quelques nanosecondes à plusieurs heures dépendant du matériaux). Le photon est ensuite collecté par le guide de lumière jusqu'au PM (photomultiplicateur) qui convertit le photon en signal électrique. Tous les composants sont isolé de la lumière externe grâce à une couche d'aluminium et une couche de plastique noir. \\
-Nos signaux sont ensuite connectés aux différents circuits logiques. La sortie du PM est connecté à un discriminateur qui transforme le signal analogique en digital en produisant un signal seulement si le signal d'entrée dépasse un certain seuil. Le discriminateur a été réglé avec un threshold de 50 $mV$ (le voltmètre indique 500 mV car il y a un amplificateur x10) et une largeur de 50 ns. La largeur a été réglée en utilisant un oscilloscope. Les signaux des deux paires de scintillateurs passent ensuite dans un module de coïncidence pour éliminer un maximum le bruit de fond.
-\\
-Entre les paires de scintillateurs est placé un matériel absorbant (cuivre ou aluminium). Après avoir traversé la première paire de scintillateurs, le muon vas se désintégrer dans le matériel et réémettre d'autres particules dans une direction aléatoire et seront donc détectées soit par la paire de scintillateurs en haut ou alors du bas après un certain temps. C'est en mesurant ce temps de désintégration qui que nous allons trouver le temps de vie du muon.
+Notre installation est composée de quatre modules comprenant chacun un scintillateur organique, un guide de lumière et un photo-multiplicateur. Un scintillateur est un matériel qui absorbe l'énergie d'une particule ionisante et la réémet sous forme de lumière. Parfois, l'état excité est méta-stable, c'est-à-dire que la période de relaxation de l'état excité à un état au repos est retardée (de quelques nanosecondes à plusieurs heures dépendant du matériaux). Le photon est ensuite collecté par le guide de lumière jusqu'au PM (photo-multiplicateur) qui convertit le photon en signal électrique. Tous les composants sont isolé de la lumière externe grâce à une couche d'aluminium et une couche de plastique noir.
+Nos signaux sont ensuite connectés aux différents circuits logiques. La sortie du PM est connecté à un discriminateur qui transforme le signal analogique en digital en produisant un signal seulement si le signal d'entrée dépasse un certain seuil. Le discriminateur a été réglé avec un threshold de 50 mV (le voltmètre indique 500 mV car il y a un amplificateur x10) et une largeur de 50 ns. La largeur a été réglée en utilisant un oscilloscope. Les signaux des deux paires de scintillateurs passent ensuite dans un module de coïncidence pour éliminer un maximum le bruit de fond.
+Entre les paires de scintillateurs est placé un matériel absorbant (cuivre ou aluminium). Après avoir traversé la première paire de scintillateurs, le muon vas se désintégrer dans le matériel et réémettre d'autres particules dans une direction aléatoire et seront donc détectées soit par la paire de scintillateurs en haut ou alors du bas après un certain temps. C'est en mesurant ce temps de désintégration qui que nous allons trouver le temps de vie du muon. Le montage présenté par la Fig. \ref{fig:Experience_1_situation} illustre: 
+\begin{itemize}
+    \item   Les 4 scintillateurs organiques emballés dans du plastique noir. Ceux-ci sont divisés en paire de deux, à savoir, les Up and Down, tous collés à des guides de lumière. 
+    \item Les guides de lumières sont alors connectés aux quatre photomultiplicateurs
+    \item   Entre les scintillateurs Up et Down, une plate de métal (Cuivre et aluminium) est mise.
+    \item   Un oscilloscope permettant de voir l'amplitude des signaux sortant.
+    \item Une carte Altera reliée à un ordinateur.
+\end{itemize}
 
+\begin{figure}[htpb!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Images/Photos/Descriptif_expe_1.png}
+    \caption{Photo prise représentative de l'expérience. Les divers PMs, scintillateurs }
+    \label{fig:Experience_1_situation}
+\end{figure}
+
+Le fonctionnement est simple, les particules chargées provenant de l'espace traversent les scintillateurs ainsi que la plaque de métal. Les muons par exemple, sont stoppés par la plaque avant de pouvoir se désintégrer.Un positron ou électron est alors émis dans une direction (haut ou bas) qui sera alors détecté par les deux scintillateurs (Up et Down).Elles vont alors perdre de l'énergie qui sera transmise au électrons des noyaux composant la matière traversée. Ceux-ci étant alors excités, vont fouloir retrouver leurs états fondamentaux par émission de lumière. Ces photons vont alors être dirigés par les PMs. La Fig. \ref{fig:PM} nous présente le processus. Un photo incident arrive en contacte avec la photo-cathode et y arrache un électron par effet photoélectrique. C'est alors que sous une différence de potentiel entre chaque dynode, cet électron libre va être multiplié afin d'obtenir un signal suffisamment important pour être lisible sur l'oscilloscope.
+
+\begin{figure}[htpb!]
+    \centering
+    \includegraphics[width=0.7\textwidth]{Images/Photos/PM.png}
+    \captionsetup{width=0.9\textwidth}
+    \caption{Processus de multiplication de l'électron incident à l'intérieur du PM.}
+    \label{fig:PM}
+\end{figure}
+
+\newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Code et logiciel quartus labview %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -338,7 +346,7 @@ Les quatres signaux des PMs sont numéroté de 1 à 4. PM1 correspond au photomu
 \paragraph{Désintégration:}
 Une fois que le muon s'est arrêté dans la plaque de matière, il vas se désintégrer et ses constituants vont ressortir dans une direction aléatoire. On veut donc arrêter le chronomètre une fois qu'on détecte les constituants qui ressortent. Il y a trois cas spécifiques à prendre en compte. Le premier cas, est quand les produits du muons sortent par le haut. Ceci provoque alors un signal dans les PM du haut qui vas activer une porte AND (qui n'étaient pas active avant car il faut qu'elle reçoivent aussi un signal que le compteur compte). Cette porte vas arrêter le chronomètre et exporter le temps. Le deuxième cas, est quand les produits sortent par le bas. Alors, le cheminement est similaire à celui d'avant. Le troisième cas, est quand les constituant sortent par un angle non couvert par les PM et donc qui ne sont ni détecté par le haut, ni par le bas. Il faut alors dire au chronomètre de s'arrêter après un certains nombre de bits (qui correspond à un timeout).
 
-\begin{figure}[htpb!]
+\begin{figure}[!ht]
     \centering
     \includegraphics[width=1\textwidth]{Images/Schemas/Quartus.jpg}
     \caption{Code visuel programmé avec QUARTUS permettant de mesurer le temps de vie du muon.}
@@ -593,16 +601,12 @@ Pour extraire les temps de vie des muons positif $\tau^{+}_{\mu}$ et négatif $\
 Lors de cette expérience nous avons calculé le temps de vie des muons et ceci par l'intermédiaire de leurs désintégrations dans deux matériaux. En voici les résultats obtenus: 
 
 \begin{center}
- \begin{tabular}{||c | c||} 
+ \begin{tabular}{ll} 
+ Matériel & $\tau$ \SIUnitSymbolMicro s \\
  \hline
- \textbf{Matériel} & \textbf{$\tau$ \SIUnitSymbolMicro s} \\
- \hline\hline
  Cuivre & 2.17 $\pm$ $1.828\times10^{-2}$ \\ 
- \hline
  Aluminium & 1.97 $\pm$ $4.31\times10^{-1}$ \\
- \hline
   PDG & 2.20 $\pm 2.2\times10^{-6}$ \\
- \hline
 \end{tabular}
 \end{center}
 
@@ -617,21 +621,18 @@ Les résultats obtenus ont un ordre de grandeur similaire à la valeur théoriqu
     
 \end{itemize}
 
-Dans un deuxième temps, il est intéressant de s'attarder un moment sur le flux des muons obtenus. En effet, nous savons que de manière générale au niveau de la mer, le flux de muons est d’environ 170 muons par $m^{2}$ et par seconde \cite{noauthor_radioactivite_nodate}, si bien que nous sommes traversés par une trentaine de muons par seconde. Regardons ce que nous avons obtenus: 
+Dans un deuxième temps, il est intéressant de s'attarder un moment sur le flux des muons obtenus. En effet, nous savons que de manière générale au niveau de la mer, le flux de muons est d’environ 170 muons par m$^{2}$ et par seconde \cite{noauthor_radioactivite_nodate}, si bien que nous sommes traversés par une trentaine de muons par seconde. Regardons ce que nous avons obtenus: 
 
 \begin{center}
-\begin{tabular}{||c|c|c|c|c||}
-    \hline
-     \textbf{Matériel} & \textbf{Secondes} & \textbf{Jours} & \textbf{$\#$ Muons} & \textbf{$\#$ Muon par $s\cdot m^2$}   \\
-     \hline\hline
-     Cuivre &  1824004 & 21,11115741 & 23864 & 0.218 \\
+\begin{tabular}{lrrrc}
+     Matériel & Secondes & Jours & N$^{\text{o}}$ Muons & N$^{\text{o}}$ Muon par s$\cdot$m$^2$\\
      \hline
-     Aluminium & 1807179 & 20,91642361 & 22575 & 0.209 \\
-     \hline
+     Cuivre &  1824004 & 21,1 & 23864 & 0.218 \\
+     Aluminium & 1807179 & 20,9 & 22575 & 0.209 \\
 \end{tabular}
 \end{center}
 
-Le flux moyen de muons interagissant est de l'ordre de $\frac{0.218+0.209}{2}=0.2135$. Ceci représente à peine le 1.4\% de ce que nous devrions obtenir (à savoir les 170 muons par $m^2$ et par secondes, dans le cas de notre expérience faisant 600 $cm^{2}$, ceci équivaut à $\frac{10'000cm^{2}}{600cm^{2}}=16.667$ et donc, un facteur de 17 de moins. Nous devrions alors trouver $\frac{170 \frac{muons}{s\cdot m^{2}}}{17}=10 \frac{muons}{s\cdot cm^{2}}$. Dans un cas idéal, sans toit, au niveau de la mer et bien entendu avec un dispositif optimal, nous devrions atteindre les 10 muons par secondes avec notre expérience. Ceci avec un régime stochastique favorable et moyenné sur une longue période de prise de mesure. Plusieurs causes peuvent amener à cette différence: 
+Le flux moyen de muons interagissant est de l'ordre de $(0.218+0.209)/2=0.2135$. Ceci représente à peine le 1.4\% de ce que nous devrions obtenir (à savoir les 170 muons par m$^2$ et par secondes, dans le cas de notre expérience faisant 600 cm$^{2}$, ceci équivaut à $10'000$ cm$^{2}/600$ cm$^{2}=16.667$ et donc, un facteur de 17 de moins. Nous devrions alors trouver $170/17=10$ muons$\cdot$ s$^{-1}\cdot $m$^{-2}$ . Dans un cas idéal, sans toit, au niveau de la mer et bien entendu avec un dispositif optimal, nous devrions atteindre les 10 muons par secondes avec notre expérience. Ceci avec un régime stochastique favorable et moyenné sur une longue période de prise de mesure. Plusieurs causes peuvent amener à cette différence: 
 
 \begin{itemize}
     \item La qualité du matériel utilisé: Le matériel étant vieux, le rendement à sans doutes diminué depuis la première utilisation. D'ailleurs nous avions eu des soucis avec un PM. Ceci est relativement bien visible sur la Fig. \ref{fig:Graph_calib_exp_1} ou le PM D est moins performant que les trois autres. C'est pourquoi nous avons du monter plus haut en Tension afin d'atteindre le pallier de calibration. Ce genre de manipulation n'est pas sans risques car une tension trop élevée peut générer plus de bruit mais aussi affaiblir d'avantage l'électronique à l'intérieur en grillant les circuit électrique.
@@ -643,7 +644,7 @@ Le flux moyen de muons interagissant est de l'ordre de $\frac{0.218+0.209}{2}=0.
     \item Le temps de travail de la carte Quartus: Le processus à un temps de travail minimum. Deux évènements dont la différence de temps est plus petite que le temps du processeur, le deuxième évènement sera alors perdu.
 \end{itemize}
 
-    En outre, il est facile de constater que les nombres de muons obtenus par secondes et par $m^{2}$ sont très similaires entre le cuivre et l'aluminium. Nous avons obtenus 0.218 $\frac{muons}{s\cdot m^{2}}$ pour le cuivre et 0.209 $\frac{muons}{s\cdot m^{2}}$ pour l'aluminium. En effet se sont deux valeurs très proche. Ceci est très intéressant car nous pouvons alors affirmer que la réussite de l'expérience ne dépend pas forcement du type de matériel que nous choisissons (Cuivre, Aluminium, etc...) mais au contraire, que celle-ci, dépend du lieu dans lequel on se trouve pour réaliser l'expérience. Par exemple, faire ce type d'expériences sur le toit de l'université (où se situe le télescope, au dessus de science 2) aurait été plus intéressant. Ceci aurait pu nous amener à des résultats plus précis. 
+    En outre, il est facile de constater que les nombres de muons obtenus par secondes et par m$^{2}$ sont très similaires entre le cuivre et l'aluminium. Nous avons obtenus 0.218 muons$\cdot$s$^{-1}\cdot$m$^{2}$ pour le cuivre et 0.209 muons$\cdot$s$^{-1}\cdot$m$^{2}$ pour l'aluminium. En effet se sont deux valeurs très proche. Ceci est très intéressant car nous pouvons alors affirmer que la réussite de l'expérience ne dépend pas forcement du type de matériel que nous choisissons (Cuivre, Aluminium, etc...) mais au contraire, que celle-ci, dépend du lieu dans lequel on se trouve pour réaliser l'expérience. Par exemple, faire ce type d'expériences sur le toit de l'université (où se situe le télescope, au dessus de science 2) aurait été plus intéressant. Ceci aurait pu nous amener à des résultats plus précis. 
 
 \subsubsection{Relation temps de demie-vie et masse du muon}
 
@@ -657,16 +658,12 @@ Si la constante de Fermi $G_{F}$ est considérée comme connue et valant $G_{F}=
 
 
 \begin{center}
-\begin{tabular}{||c|c||}
+\begin{tabular}{ll}
+    Matériel & $m_{\mu}$ MeV\\
     \hline
-    \textbf{Matériel} & \textbf{$m_{\mu}$ MeV}  \\
-    \hline\hline
-    Cuivre & 105,877$\pm$1,462 \\
-    \hline
-    Aluminium & 107,908$\pm$2,751\\
-    \hline
-    PDG & 105.6583668 $\pm$ 0.0000038 \\
-    \hline
+    Cuivre & 105.9 $\pm$ 1.5 \\
+    Aluminium & 107.9 $\pm$ 2.8\\
+    PDG & 105.7 $\pm$ 3.8$\times10^{-6}$ \\
 \end{tabular}
 \end{center}
 
@@ -702,78 +699,72 @@ La deuxième amélioration qui pourrait être faite sur ce laboratoire est la va
 Dans le cas inverse ou la variation de muon serait moindre alors ceci permettrait de confirmer la théorie mettant en avant la propriété isotropique de l'espace. Et alors dans ce cas le soleil ne jouerait pas un grand rôle dans la création des muons détectés sur terre. Bien entendu ceci est une proposition d'expérience, il faudrait voir si l'expérience que nous avons utilisées permet de répondre à cette question...
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% Conclusion  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Conclusion locale  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Conclusion}
+\subsection{Résumé des mesures}
 
 En utilisant une plaque de cuivre et d'aluminium, nous avons obtenus pour le temps de demie-vie du muon les valeurs suivantes: 
 
 \begin{center}
-\begin{tabular}{||c|c||}
+\begin{tabular}{lr}
+    Matériel & $\tau$ \SIUnitSymbolMicro s   \\
     \hline
-    \textbf{Matériel}  & \textbf{$\tau$ $\mu$s}   \\
-    \hline\hline
     Cuivre & 2.16492 $\pm$ 0.01828 \\
-    \hline
     Aluminium & 1.96872 $\pm$ 0.4314\\
-    \hline
     PDG &  2.1969811 $\pm $0.0000022 \\
-    \hline
 \end{tabular}
 \end{center}
 
-On peut constater que les valeurs sont en accord avec valeur issue du PDG ce qui nous laisse à croire que dans son ensemble, l'expérience c'est bien déroulée et elle pourrait encore mieux se dérouler si on remplaçait le PM défectueux.
+On peut constater que les valeurs sont en accord avec valeur issue du PDG ce qui nous laisse à croire que dans son ensemble, l'expérience s'est bien déroulée.
 
 
 \newpage
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% DEUXIEME EXPERIENCE%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Mesure du flux cosmique}
-
 Durant le deuxième partie de notre laboratoire nous nous sommes intéressés au flux cosmique. Le but était de mettre en place un télescope à muons capable de non seulement les détecter, comme pour l'expérience précédente, mais en plus de pouvoir étudier les muons provenant de toutes les directions dans le ciel. Le dispositif possède deux degrés de libertés suivant les angles azimutale et méridional. Nous allons vous expliquer, pas à pas la manière dont nous avons procédé. 
 
 \subsection{Procédure de construction}
-
 La procédure à été divisée en deux grosses parties: la réalisation des pièces puis le montage. 
 
 \subsubsection{Réalisation de pièces}
-
 Nous avons eu la chance de pouvoir participer à la fabrication de ce télescope à muons en nous occupant de la partie collage et enrobage des quatre scintillateurs. 
 
 \begin{itemize}
-    \item \textbf{La fabrication des scintillateurs: } Pour notre part, la fabrication des scintillateurs était restreinte au collage des différentes parties entre elles. À savoir une partie scintillante (qui est divisée en deux parties, une carrée et une autre en forme de cône, cette partie scintillante peut être observée sur la Fig. \ref{scintilateur}),  une partie en plexiglas (conduisant la lumière, celle-ci est en forme de cylindre sur la Fig. \ref{scintilateur}) et permettant l'emboîtage avec les photon-multiplicateurs. Une colle sous forme de résine à été utilisée afin de les coller. Celle-ci est choisie pour ce genre de manipulations par sa caractéristique à être fortement perméable à la lumière (ce qui diminue le coefficient de réflexion entre les deux matériaux. Cette étape à été principalement réalisée par Coralie. Notre charge de travaille, chacun, consistait à coller, pour un scintillateur, les deux parties scintillantes (celle carrée et celle de forme conique) entre elles. 
+    \item \textbf{La fabrication des scintillateurs: } Pour notre part, la fabrication des scintillateurs était restreinte au collage des différentes parties entre elles. À savoir une partie scintillante (qui est divisée en deux parties, une carrée et une autre en forme de cône, cette partie scintillante peut être observée sur la Fig. \ref{fig:Scintillateur}),  une partie en plexiglas (conduisant la lumière, celle-ci est en forme de cylindre) et permettant l'emboîtage avec les photon-multiplicateurs. Une colle sous forme de résine à été utilisée afin de les coller. Celle-ci est choisie pour ce genre de manipulations par sa caractéristique à être fortement perméable à la lumière (ce qui diminue le coefficient de réflexion entre les deux matériaux. Cette étape à été principalement réalisée par Coralie. Notre charge de travaille, chacun, consistait à coller, pour un scintillateur, les deux parties scintillantes (celle carrée et celle de forme conique) entre elles. 
     
-\begin{figure}[htpb!]
-        \centering
-            \includegraphics[width=0.5\textwidth]{Images/Photos/scintilateur.jpg}
-            \caption{Voici un apercu des différentes couches constituant les scintillateurs. En partant de la gauche, nous avons une forme cylindrique, faite de plexiglas et ayant pour but de conduire la lumière ainsi que de s'emboîter dans le PM. La pièce du milieux est une partie scintillante en forme de cône. Et finalement la dernière est en forme de carré et aussi scintillante.}
-            \label{scintilateur}
+\begin{figure}[htbp!] 
+\centering  
+    \begin{subfigure}[t]{.45\textwidth}
+    \includegraphics[width=1.0\textwidth]{Images/Photos/scintilateur.jpg}
+    \captionsetup{width=0.8\textwidth}
+    \caption{Les scintillateurs sont en trois parties: une forme cylindrique en plexiglas qui conduit la lumière et s'emboîte dans le PM. Une partie en cône pour guider la lumière et un carré scintillant qui produit des photons.}
+    \label{fig:Scintillateur}
+    \end{subfigure}
+    \begin{subfigure}[t]{.45\textwidth}
+    \includegraphics[width=1.0\textwidth]{Images/Photos/couche_scintilateur.jpg}
+    \captionsetup{width=0.8\textwidth}
+    \caption{Enrobage d'un scintillateur par une couche d'aluminium et de plastique noir servant à éviter toute fuite de lumière.}
+    \label{fig:couche_scintilateur}
+    \end{subfigure}
+\caption{Photo des scintillateurs.}
+\label{Scintillateurs2Fig}
 \end{figure}
 
-
-\begin{figure}[htpb!]
-        \centering
-            \includegraphics[width=0.5\textwidth]{Images/Photos/couche_scintilateur.jpg}
-            \caption{Enrobage d'un scintillateur par une couche d'aluminium et de plastique noir.}
-            \label{couche_scintilateur}
-\end{figure}
-
-    \item \textbf{L'assemblage des PMs: } Pour assembler des photon-multiplicateurs avec les scintillateurs, nous avons utilisé de l'aluminium, des feuilles plastifiées noires imperméable à la lumière ainsi que du scotch noir afin de combler les jonctions. Le but de la manipulation est de recouvrir les scintillateurs avec une première couche d'aluminium, puis avec les feuilles de plastique noir et finalement boucher leurs jonctions avec des bouts de scotch, voir Fig. \ref{couche_scintilateur}. Cette manipulation est cruciale car une seule petite fuite de lumière peut fortement modifier les résultats. Une trou laissant entrer de la lumière augmente considérablement le nombre d'électrons multipliés par nos PM. Des électrons venant de l'extérieur du PM augmenteront alors la tension finale issue du PM. Si la tension introduite est élevé alors celui-ci peut griller. Une photos des photo-multiplicateurs peut être aperçu sur la Fig. \ref{fig:PMS_photo}.
+    \item \textbf{L'assemblage des PMs: } Pour assembler des photon-multiplicateurs avec les scintillateurs, nous avons utilisé de l'aluminium, des feuilles plastifiées noires imperméable à la lumière ainsi que du scotch noir afin de combler les jonctions. Le but de la manipulation est de recouvrir les scintillateurs avec une première couche d'aluminium, puis avec les feuilles de plastique noir et finalement boucher leurs jonctions avec des bouts de scotch, voir Fig. \ref{fig:couche_scintilateur}. Cette manipulation est cruciale car une seule petite fuite de lumière peut fortement modifier les résultats. Une trou laissant entrer de la lumière augmente considérablement le nombre d'électrons multipliés par nos PM. Des électrons venant de l'extérieur du PM augmenteront alors la tension finale issue du PM. Si la tension introduite est élevé alors celui-ci peut griller. Une photos des photo-multiplicateurs peut être aperçu sur la Fig. \ref{fig:PMS_photo}.
     
     \begin{figure}[htpb!]
         \centering
         \includegraphics[width=0.9\textwidth]{Images/Photos/PM_photo.jpg}
-        \caption{Une fuite de lumière, augmente considérablement la tension à l'intérieur des PM et un risque de surcharge peut avoir lieu. Bien faire attention d'avoir bouché tous les trous!}
+        \caption{Chevauchement des scintillateurs. Une fuite de lumière, augmente considérablement la tension à l'intérieur des PM et un risque de surcharge peut avoir lieu. Il faut faire attention d'avoir bouché tous les trous.}
         \label{fig:PMS_photo}
     \end{figure}
-    
 
     \item \textbf{Le montage de la structure externe: } Cette partie c'est faite relativement rapidement. Nous avons reçu les pièces séparée et il a fallu les assembler entre elles avec divers boulons et vis. Le rendu final de notre expérience peut être observé sur la figure numéro \ref{fig:Structure_integrale}.
     \begin{figure}[htpb!]
         \centering
-        \includegraphics[width=0.3\textwidth]{Images/Photos/Structure_integrale_exp.jpg}
+        \includegraphics[width=0.7\textwidth]{Images/Photos/Structure_integrale_exp.jpg}
         \caption{Structure intégrale du télescope à muons.}
         \label{fig:Structure_integrale}
     \end{figure}
@@ -792,7 +783,8 @@ De la même manière que pour la première expérience, nous constatons que les 
 
 \begin{figure}[htpb!]
     \centering
-    \includegraphics[width=0.8\textwidth]{graphiques/experience2/calibration_exp_2.png}
+    \includegraphics[width=0.7\textwidth]{graphiques/experience2/calibration_exp_2.png}
+    \captionsetup{width=0.9\textwidth}
     \caption{Calibration des tensions du téléscope à muons. Les intersections des lignes de régression représentent les tensions optimales à exercer sur chaque PM. Les valeurs précises sont illustrés dans l'encadré.}
     \label{fig:Graph_calib_exp_2}
 \end{figure}
@@ -856,6 +848,7 @@ Sur la Fig. \ref{fig:CourbeRetard}, on voit que sur la première série de mesur
 \begin{figure}[htpb!]
     \centering
     \includegraphics[width=0.5\textwidth]{Images/Schemas/CourbeDeRetard.jpg}
+    \captionsetup{width=0.8\textwidth}
     \caption{Courbe de retard que l'on s'attend à voir.}
     \label{fig:Schema_Courbe_de_retard}
 \end{figure}
@@ -863,6 +856,7 @@ Sur la Fig. \ref{fig:CourbeRetard}, on voit que sur la première série de mesur
 \begin{figure}[htpb!]
     \centering
     \includegraphics[width=0.5\textwidth]{Images/Photos/Delay2.jpg}
+    \captionsetup{width=0.8\textwidth}
     \caption{Module de retard FE290. Permet de retarder précisément les signaux analogiques.}
     \label{fig:Delay}
 \end{figure}
@@ -870,6 +864,7 @@ Sur la Fig. \ref{fig:CourbeRetard}, on voit que sur la première série de mesur
 \begin{figure}[htpb!]
     \centering
     \includegraphics[width=0.8\textwidth]{graphiques/experience2/DirectionMuons.png}
+    \captionsetup{width=0.8\textwidth}
     \caption{Deux courbes de retard indiquant la direction des muons. La première série n'est pas retardée alors que la deuxième a été artificiellement retardée avec un câble de 9 ns. On voit que si on retarde les PMs 1\&2 qui sont en haut de 4 ou 5 ns alors il y a coïncidence.}
     \label{fig:CourbeRetard}
 \end{figure}
@@ -886,6 +881,7 @@ Cette manipulation est identique à celle réalisée dans la partie 2.2.2. (rapp
 \begin{figure}
     \centering
     \includegraphics[width=0.5\textwidth]{graphiques/experience2/resultat_telescope_muon.png}
+    \captionsetup{width=0.8\textwidth}
     \caption{Voici une représentation sous forme de sphère des résultats attendu pour cette deuxième expérience. L'échelle est normalisée. Ceci signifie que le 1.0 représente la direction ou la quantité de muons en provenance est maximale et le 0 représenterait la direction ou la quantité de muons observée est nulle. En partant du principe que les muons ne possède pas assez d'énergie pour traverser la totalité du diamètre terrestre, il s'agirait alors de la direction perpendiculaire au sol. À noter que cette théorie est une supposition et que nous n'avons pas eu le temps de la prouver par l'expérience.}
     \label{resultat_telescope_muon}
 \end{figure}
@@ -896,6 +892,7 @@ Pour réaliser un graphique de la sorte (cf. Fig. \ref{resultat_telescope_muon})
 \begin{figure}[htpb!]
     \centering
     \includegraphics[width=0.6\textwidth]{Images/Schemas/Cone.jpeg}
+    \captionsetup{width=0.7\textwidth}
     \caption{Croquis de se que l'on voulait encore mesurer.}
     \label{fig:cone}
 \end{figure}
@@ -909,6 +906,7 @@ Rappelons que cette expérience à été réalisée au sous-sol de l'école de p
 \begin{figure}[htpb!]
     \centering
     \includegraphics[width=0.6\linewidth]{graphiques/experience2/gmap_ecole_phy_vue_dessus.png}
+    \captionsetup{width=0.7\textwidth}
     \caption{Vue d'oiseau de l'école de physique. Notre idée était de comprendre si la présence d'un bâtiment pourrait réduire la quantité de muons interagissant avec notre télescope à muons. }
     \label{fig:ecole_phys_vue_du_dessus}
 \end{figure}
@@ -916,6 +914,7 @@ Rappelons que cette expérience à été réalisée au sous-sol de l'école de p
 \begin{figure}[htpb!]
     \centering
     \includegraphics[width=0.6\linewidth]{graphiques/experience2/gmap_ecole_de_phys_vu_prof.jpg}
+    \captionsetup{width=0.7\textwidth}
     \caption{École de physique vu de profil. Le muon ayant une trajectoire proche du sol traverse pendant plus longtemps le bâtiment contrairement à un muon venant directement du haut. Le premier à donc plus de chance d'interagir avec de la matière avant d'atteindre notre télescope. Le nombre de muon détecté via cette angle devrait donc diminuer.}
     \label{fig:ecole_phys_vue_du_prof}
 \end{figure}
