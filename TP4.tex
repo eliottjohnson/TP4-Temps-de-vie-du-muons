@@ -191,10 +191,12 @@ Ils arrivent avec une distribution proportionnel à $\text{cos}(\theta)^2$, où 
 Le but de cette première expérience sera de mesurer la valeur du temps de vie des muons et de la comparer avec la valeur théorique.
 
 \subsubsection{Temps de vie des muons}
-La désintégration des particules est un processus poissonnien, ainsi la probabilité qu'une particule survive un temps $t$ avant de se désintégrer est donnée par une distribution exponentielle.
+La désintégration de particules est un processus poissonnien, ainsi la probabilité qu'une particule survive un temps $t$ avant de se désintégrer est donnée par une distribution exponentielle.
+
 \begin{equation}
 P(t) = e^{-t/\gamma\tau}
 \end{equation}
+
 où $\tau$  est le temps de vie de la particule (au repos), et $\gamma = \frac{1}{\sqrt{1-v^2/c^2}}$ est le facteur de Lorentz de la particule \cite{noauthor_particle_2019}. La valeur du temps de vie du muon selon le PDG (Particle Data Group)\cite{PhysRevD.98.030001} est: \[\tau = 2.1969811\pm0.0000022\cdot10^{-6} \text{s}\]
 Le muon va se désintégrer soit en électron, soit en positron dépendant de sa charge initial ainsi que en deux neutrinos. Par exemple:
 \begin{equation}
@@ -240,8 +242,9 @@ La dépendance en puissance de 4 du numéro atomique est une bonne approximation
 
 \begin{table}[htbp]
   \centering
-  \caption{Temps de vie des muons positifs et négatifs dans différents matériaux. Le temps de vie des muons positifs est tout le temps 2.2 $\mu s$, alors que le temps de vie des muons négatifs dépends du nombre atomique Z \cite{tamamushi_lifetime_nodate}.}
-  \scalebox{0.8}{
+  \captionsetup{width=0.9\textwidth}
+  \caption{\textit{Temps de vie des muons positifs et négatifs dans différents matériaux. Le temps de vie des muons positifs est tout le temps 2.2 $\mu s$, alors que le temps de vie des muons négatifs dépends du nombre atomique Z \cite{tamamushi_lifetime_nodate}.}}
+  \scalebox{1.0}{
     \begin{tabular}{lccc}
     Matériaux & \multicolumn{1}{l}{Z} & \multicolumn{1}{l}{Temps de vie du $\mu+$ ($\mu s$)} & \multicolumn{1}{l}{Temps de vie du $\mu^{-}$ ($\mu s$)} \\
     \hline
@@ -257,8 +260,40 @@ La dépendance en puissance de 4 du numéro atomique est une bonne approximation
 \end{table}
 
 
-Durant cette expérience nous nous attendons donc à pouvoir mesurer $\tau_{total}^{+}$  puis en déduire le temps de vie du muon positif ainsi que celui du muon négatif. Pour le second, la méthode est décrite dans la sous partie qui suit.  
+Durant cette expérience nous nous attendons donc à pouvoir mesurer $\tau_{total}^{+}$  puis en déduire le temps de vie du muon positif ainsi que celui du muon négatif. Pour le second, la méthode est décrite dans la sous partie qui suit.
 
+\newpage
+
+\subsubsection{Hélicité}
+
+Un petit rappel sur l'hélicité: on considère une hélicité droitière H$=+1$ si le vecteur vitesse et spin sont dans la même direction et gauchère H$=-1$ si ils sont inversé. L'interaction faible crée en forte probabilité des particules gauchère et des antiparticules droitière. Les muons sont crée par les rayons cosmiques et en particulier les pions. Un exemple de désintégration pour le pion positif: $\pi_{+}\rightarrow\nu_{\mu}+\mu^{+}$. Les muons que l'on détectent au sol ont un vecteur vitesse qui pointe vers le bas, ainsi les neutrinos associé ont leur vecteur vitesse qui point vers le haut, voir la Fig. \ref{fig:Helicite}. Les neutrinos, avec une masse très petite, sont toujours gauchères mais par conservation du spin le muon positif (antiparticule) doit être gaucher ce qui n'est pas son hélicité préférée mais est rendu possible par sa masse élevée. Le muon positif avec un spin Up peut maintenant se désintégrer dans la plaque de nôtre expérience. Il peut alors émettre un positron vers le haut ou vers le bas comme on peut voir sur la Fig. \ref{HelicitéElecUpDown}. Par conservation de spin si le positron vas vers le haut alors il sera droitier ce qui est favorable pour une antiparticule et gaucher si il vas vers le bas ce qui est défavorable. Pour la désintégration du muon négatif, l'effet sera le même et on s'attend donc à avoir plus de détection vers le haut que pour vers le bas.
+
+
+
+\begin{figure}[htpb!]
+    \centering
+    \includegraphics[width=0.4\textwidth]{Images/Photos/Helicite.jpg}
+    \caption{Spin des produits de la désintégration du pion positif.}
+    \label{fig:Helicite}
+\end{figure}
+
+\begin{figure}[htbp!] 
+\centering  
+    \begin{subfigure}[t]{.45\textwidth}
+    \includegraphics[width=.9\textwidth]{Images/Photos/HeliciteElecUp.jpg}
+    \captionsetup{width=0.8\textwidth}
+    \caption{Hélicité si l'électron vas vers le haut.}
+    \label{fig:HeliciteElecUp}
+    \end{subfigure}
+    \begin{subfigure}[t]{.45\textwidth}
+    \includegraphics[width=.9\textwidth]{Images/Photos/HeliciteElecDown.jpg}
+    \captionsetup{width=0.8\textwidth}
+    \caption{Hélicité si l'électron vas vers le bas.}
+    \label{fig:HeliciteElecDown}
+    \end{subfigure}
+\caption{Désintégration du muon avec spin Up. Un désintégration vers le haut sera privilégiée.}
+\label{HelicitéElecUpDown}
+\end{figure}
 
 \subsubsection{Extrapolation du temps de vie du muon négatif}
 
@@ -338,12 +373,12 @@ La première étape consistait à calibrer nos PMs. La manipulation est relative
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Temps de vie du muon : Cuivre}
 
-Dans un premier temps nous avons décidé de travailler séparément avec les données obtenues des deux PMs du dessus ainsi que ceux du dessous. Les résultats peuvent être observés sur la figure numéro \ref{fig:comptage_cuivre_up_down_separement}.
+Dans un premier temps nous avons décidé de travailler séparément avec les données obtenues des deux PMs du dessus ainsi que ceux du dessous. Les résultats peuvent être observés sur la Fig. \ref{fig:comptage_cuivre_up_down_separement}. On voit qu'il y a plus d'évenement sur les PMs du haut comme prédit par la théorie sur l'hélicité.
 
 \begin{figure}[htpb!]
     \centering
     \includegraphics[width=0.8\textwidth]{graphiques/experience1/cuivre/comptage_cuivre_up_down_separement.png}
-    \caption{Histogramme en fonction du temps pour les PM up et PM down et pour le cuivre. Ce graphique nous présente le comptage obtenus par les PMs du dessus (en jaune) et du dessous séparément (en bleu). Nous pouvons constater que le taux est de 15\% plus élevé pour la coïncidence du dessus.}
+    \caption{Histogramme en fonction du temps pour les PM up et PM down et pour le cuivre. Ce graphique nous présente le comptage obtenus par les PMs du dessus (en jaune) et du dessous séparément (en bleu). Nous pouvons constater que le taux est de 15\% plus élevé pour la coïncidence du dessus comme prédit par la théorie sur le spin.}
     \label{fig:comptage_cuivre_up_down_separement}
 \end{figure}
 
@@ -373,19 +408,64 @@ La valeur expérimentale obtenue pour le temps de vie du muon est donc de $\tau$
 
 Plusieurs observations peuvent être faites. La première, est de voir que l'ordre de grandeur entre la valeur pratique et théorique est identique et est de l'ordre du \SIUnitSymbolMicro s. La deuxième constatation qui peut être faite est au sujet des valeurs obtenues. En effet, il est facile d'observer que les deux valeurs sont très proches (2.17 contre 2.20) toutefois en prenant en considération l'erreur obtenue nous n'englobons pas la valeur du PDG. (Car $2.165+0.018=2.182$). Toutefois la valeur est très proche et donc bonne à prendre. Cette différence peut venir de plusieurs facteurs tels que les manipulations, le temps d'exposition ( il aurait peut-être fallu prendre plus de données et ceci sur une plus longue période d'exposition) mais aussi l'état du matériel, en particulier la vieillesse d'un des PM pourrait expliquer cet écart avec le PDG. Pour obtenir un résultat plus rapproché il aurait fallu être plus minutieux. 
 
-Une autre chose que nous avons essayé est de faire un fit, voir la Fig. \ref{fig:FitUpDown}, sur uniquement les PMs du haut et du bas. Nous trouvons alors temps de vie pour les muons Up
-$\tau_{+\text{Up}}=2.13$ \SIUnitSymbolMicro s et pour les muon  Down $\tau_{+\text{Down}}=2.46$ \SIUnitSymbolMicro s. \colorbox{red}{VOIR HELICITY.}
+Une autre chose que nous avons essayé est de faire un fit, voir la Fig. \ref{fig:UpDownPositifMuonCuivre}, sur uniquement les PMs du haut et du bas. Nous trouvons alors temps de vie pour les muons Up
+$\tau_{+\text{Up}}=2.13$ \SIUnitSymbolMicro s et pour les muon  Down $\tau_{+\text{Down}}=2.46$ \SIUnitSymbolMicro s et pour les muons négatif on trouve $\tau_{-\text{Up}}=1.90$ \SIUnitSymbolMicro s et $\tau_{-\text{Down}}=0.732$ \SIUnitSymbolMicro s. Nous avons fait les mesures pour l'aluminium et un recapitulatif des mesures peut être trouvé sur la Table \ref{TauPositifNegatifComplet}.
 
 \begin{figure}[htpb!]
     \centering
-    \includegraphics[width=0.9\textwidth]{Images/Photos/FitUpDown.jpeg}
-    \caption{Fit pour voir la différence entre les PM Up et Down.}
-    \label{fig:FitUpDown}
+    \includegraphics[width=1.0\textwidth]{Images/Photos/UpDownPositifMuonCuivre.jpeg}
+    \caption{Fit pour voir la différence entre les PM Up et Down dans le cuivre pour les muons positifs. $\tau_{+\text{Up}}=2.16$ \SIUnitSymbolMicro s et $\tau_{+\text{Down}}=2.26$ \SIUnitSymbolMicro s }
+    \label{fig:UpDownPositifMuonCuivre}
 \end{figure}
+
+\begin{figure}[htpb!]
+    \centering
+    \includegraphics[width=1.0\textwidth]{Images/Photos/UpDownNegatifMuonCuivre.jpeg}
+    \caption{Fit pour voir la différence entre les PMs Up et Down dans le cuivre pour les muons négatif. $\tau_{-\text{Up}}=1.90$ \SIUnitSymbolMicro s et $\tau_{-\text{Down}}=0.732$ \SIUnitSymbolMicro s}
+    \label{fig:UpDownNegatifMuonCuivre}
+\end{figure}
+
+\begin{figure}[htpb!]
+    \centering
+    \includegraphics[width=1.0\textwidth]{Images/Photos/UpDownPositifMuonAlu.jpeg}
+    \caption{Fit pour voir la différence entre les PM Up et Down dans l'aluminium pour les muons positifs. $\tau_{+\text{Up}}=2.08$ \SIUnitSymbolMicro s et $\tau_{+\text{Down}}=2.13$ \SIUnitSymbolMicro s }
+    \label{fig:UpDownPositifMuonAlu}
+\end{figure}
+
+\begin{figure}[htpb!]
+    \centering
+    \includegraphics[width=1.0\textwidth]{Images/Photos/UpDownNegatifMuonAlu.jpeg}
+    \caption{Fit pour voir la différence entre les PMs Up et Down dans l'aluminium pour les muons négatif. $\tau_{-\text{Up}}=1.32$ \SIUnitSymbolMicro s et $\tau_{-\text{Down}}=0.537$ \SIUnitSymbolMicro s}
+    \label{fig:UpDownNegatifMuonAlu}
+\end{figure}
+
+\begin{table}[htbp!]
+  \centering
+  \captionsetup{width=0.9\textwidth}
+  \caption{Résulats expérimentaux pour le temps de vie des muons positifs et négatifs dans les PM up et down.}
+  \begin{tabular}{lc|cccc}
+     & & $+$ Cuivre  & $+$ Aluminium & $-$ Cuivre & $-$ Aluminium \\
+    \hline
+    Up &  $\tau$ & 2.16 & 2.08 & 1.90 & 1.32\\
+    &Entrées & 13'462 & 11'611 & 13'462 & 11'611 \\
+    & $\chi^{2}$ & 1.13 & 0.50 & 1.55 & 1.95\\
+    & Prob. & 0.311 & 0.95 & 0.034 & 0.002\\
+    \hline
+    Down & $\tau$ & 2.26 & 2.13 & 0.732 & 0.537 \\
+    &Entrées & 10'402 & 10'964  & 10'402 & 10'964\\
+    &$\chi^{2}$ & 0.96 & 0.91 & 1.15 & 1.34 \\
+    &Prob. & 0.54 & 0.96 & 0.27 & 0.11\\
+    \hline
+    Prédiction [5] & & 2.2 & 2.2 & 0.16 & 0.88 \\
+    
+\end{tabular}
+\label{TauPositifNegatifComplet}
+\end{table}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Analyse et graphe : Temps de vie du muon : Cuivre %%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
 \subsubsection{Oscillation journalière du flux muonique : Cuivre}
 
 Une deuxième thématique abordé durant ce travail pratique à été la variation du flux muonique en fonction de l'heure dans une journée. En partant du principe que la majorité des muons détectés par notre expérience ont été crée par le soleil, il en va de soi qu'une variation jour-nuit pourrait potentiellement être observée. La terre étant très proche du soleil, celui-ci est la principale source de muons détectés sur la terre et donc que l'isotropie cosmologique (c'est-à-dire qu'il n'existe pas de direction privilégiée pour une observation) pouvait donc être écarté.
@@ -460,19 +540,15 @@ Pour extraire les temps de vie des muons positif $\tau^{+}_{\mu}$ et négatif $\
 
 \begin{table}[htbp!]
   \centering
+  \captionsetup{width=0.9\textwidth}
   \caption{Résulats expérimentaux pour le temps de vie des muons positifs et négatifs.}
-  \begin{tabular}{||c|c|c|c|c|c||}
+  \begin{tabular}{cccccc}
+     Valeur & N$^{\text{o}}$ Entrées & Expérimentale & $\chi^{2}/ndf$  & Théorique & $\epsilon$ \%\\
     \hline
-     Valeur & \# Entrées & Expérimentale & $\chi^{2}/ndf$  & Théorique & $\epsilon$ \%\\
-    \hline\hline
     Cuivre $\tau_{+}$ & 23684 & 2.26 & 0.94 & 2.20 & 2.7\\
-    \hline
     Cuivre $\tau_{-}$ & 23684 & 0.24 & 1.53 & 0.16 & 50 \\
-    \hline
     Alu $\tau_{+}$ & 22575 & 2.16 & 0.68 & 2.20 & 1.8\\
-    \hline
     Alu $\tau_{-}$ & 22575 & 0.68 & 1.07 & 0.88 & 22\\
-    \hline
 \end{tabular}
 \label{TauPositifNegatif}
 \end{table}
