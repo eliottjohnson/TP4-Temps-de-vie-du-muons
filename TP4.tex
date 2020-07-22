@@ -222,7 +222,7 @@ ou l'index i représente l'index total, free decay et capture. On peut considér
      \Gamma_{\text{capture}} =  \Gamma_{\text{hydrogène}} \cdot Z^{4}
 \end{equation}
 
-La dépendance en puissance de 4 du numéro atomique est une bonne approximation tant que les noyaux sont petits (i.e. $Z<100$). Il faut comprendre ici que lors de cette expérience, uniquement des électrons sont mesurés. Dans ce cas $\Gamma_{\text{total}}$ est mesuré. Nous comprenons alors que le $\Gamma_{\text{capture}}$ varie en fonction du matériel avec lequel nous travaillons. À noter que $\tau_{\text{hydrogène}}=2.4\cdot10^{3}$. La Table \ref{tab:LifetimeinMaterial} nous présente les résultats attendu en fonction du Z choisi.
+La dépendance en puissance de 4 du numéro atomique est une bonne approximation tant que les noyaux sont petits (i.e. $Z<100$). Il faut comprendre ici que lors de cette expérience, uniquement des électrons sont mesurés. Dans ce cas $\Gamma_{\text{total}}$ est mesuré. Nous comprenons alors que le $\Gamma_{\text{capture}}$ varie en fonction du matériel avec lequel nous travaillons. Nous allons donc utiliser des plaques de différentes matières pour vérifier la formule. À noter que $\tau_{\text{hydrogène}}=2.4\cdot10^{3}$. La Table \ref{tab:LifetimeinMaterial} nous présente les résultats attendu en fonction du Z choisi.
 
 \begin{table}[htbp]
   \centering
@@ -296,7 +296,7 @@ Notons que dans cette deuxième fit, les valeurs $N_{+}$ ainsi que $\tau_{+}$ so
 
 Notre installation est composée de quatre modules comprenant chacun un scintillateur organique, un guide de lumière et un photo-multiplicateur. Un scintillateur est un matériel qui absorbe l'énergie d'une particule ionisante et la réémet sous forme de lumière. Parfois, l'état excité est méta-stable, c'est-à-dire que la période de relaxation de l'état excité à un état au repos est retardée (de quelques nanosecondes à plusieurs heures dépendant du matériaux). Le photon est ensuite collecté par le guide de lumière jusqu'au PM (photo-multiplicateur) qui convertit le photon en signal électrique. Tous les composants sont isolé de la lumière externe grâce à une couche d'aluminium et une couche de plastique noir.
 Nos signaux sont ensuite connectés aux différents circuits logiques. La sortie du PM est connecté à un discriminateur qui transforme le signal analogique en digital en produisant un signal seulement si le signal d'entrée dépasse un certain seuil. Le discriminateur a été réglé avec un threshold de 50 mV (le voltmètre indique 500 mV car il y a un amplificateur x10) et une largeur de 50 ns. La largeur a été réglée en utilisant un oscilloscope. Les signaux des deux paires de scintillateurs passent ensuite dans un module de coïncidence pour éliminer un maximum le bruit de fond.
-Entre les paires de scintillateurs est placé un matériel absorbant (cuivre ou aluminium). Après avoir traversé la première paire de scintillateurs, le muon vas se désintégrer dans le matériel et réémettre d'autres particules dans une direction aléatoire et seront donc détectées soit par la paire de scintillateurs en haut ou alors du bas après un certain temps. C'est en mesurant ce temps de désintégration qui que nous allons trouver le temps de vie du muon. Le montage présenté par la Fig. \ref{fig:Experience_1_situation} illustre: 
+Entre les paires de scintillateurs est placé un matériel absorbant (cuivre ou aluminium). Après avoir traversé la première paire de scintillateurs, le muon vas se désintégrer dans le matériel et réémettre d'autres particules dans une direction aléatoire et seront donc détectées soit par la paire de scintillateurs en haut ou alors du bas après un certain temps. C'est en mesurant ce temps de désintégration qui que nous allons trouver le temps de vie du muon. Le montage présenté par la Fig. \ref{fig:Experience_1_montage} illustre: 
 \begin{itemize}
     \item   Les 4 scintillateurs organiques emballés dans du plastique noir. Ceux-ci sont divisés en paire de deux, à savoir, les Up and Down, tous collés à des guides de lumière. 
     \item Les guides de lumières sont alors connectés aux quatre photomultiplicateurs
@@ -309,10 +309,12 @@ Entre les paires de scintillateurs est placé un matériel absorbant (cuivre ou 
     \centering
     \includegraphics[width=0.8\textwidth]{Images/Photos/Descriptif_expe_1.png}
     \caption{Photo prise représentative de l'expérience. Les divers PMs, scintillateurs }
-    \label{fig:Experience_1_situation}
+    \label{fig:Experience_1_montage}
 \end{figure}
 
-Le fonctionnement est simple, les particules chargées provenant de l'espace traversent les scintillateurs ainsi que la plaque de métal. Les muons par exemple, sont stoppés par la plaque avant de pouvoir se désintégrer.Un positron ou électron est alors émis dans une direction (haut ou bas) qui sera alors détecté par les deux scintillateurs (Up et Down).Elles vont alors perdre de l'énergie qui sera transmise au électrons des noyaux composant la matière traversée. Ceux-ci étant alors excités, vont fouloir retrouver leurs états fondamentaux par émission de lumière. Ces photons vont alors être dirigés par les PMs. La Fig. \ref{fig:PM} nous présente le processus. Un photo incident arrive en contacte avec la photo-cathode et y arrache un électron par effet photoélectrique. C'est alors que sous une différence de potentiel entre chaque dynode, cet électron libre va être multiplié afin d'obtenir un signal suffisamment important pour être lisible sur l'oscilloscope.
+Le fonctionnement est simple, les particules chargées provenant de l'espace traversent les scintillateurs ainsi que la plaque de métal. Les muons, sont arrêtées par la plaque avant de se désintégrer. Un positron (ou électron dépendant de la charge du muon incident) est alors émis dans une direction (haut ou bas) et sera détecté par un des deux scintillateurs (Up ou Down). Les positrons excitent les molécules du scintillateur qui eu à leurs tours veulent retrouver un état fondamental en émettant des photons et permet la détection.  Ces photons vont alors être dirigés par les guides de lumières vers les PMs (voir les noires présentées sur la Fig. \ref{fig:Experience_1_montage}).
+
+Un photon incident arrive en contacte avec la photo-cathode et y arrache un électron par effet photoélectrique. C'est alors que sous une différence de potentiel entre chaque dynode, cet électron libre va être multiplié afin d'obtenir un signal suffisamment important pour être lisible sur l'oscilloscope (voir Fig. \ref{fig:PM}).
 
 \begin{figure}[htpb!]
     \centering
@@ -476,29 +478,23 @@ $\tau_{+\text{Up}}=2.13$ \SIUnitSymbolMicro s et pour les muon  Down $\tau_{+\te
 \newpage
 \subsubsection{Oscillation journalière du flux muonique : Cuivre}
 
-Une deuxième thématique abordé durant ce travail pratique à été la variation du flux muonique en fonction de l'heure dans une journée. En partant du principe que la majorité des muons détectés par notre expérience ont été crée par le soleil, il en va de soi qu'une variation jour-nuit pourrait potentiellement être observée. La terre étant très proche du soleil, celui-ci est la principale source de muons détectés sur la terre et donc que l'isotropie cosmologique (c'est-à-dire qu'il n'existe pas de direction privilégiée pour une observation) pouvait donc être écarté.
-
-Nous savons que par exemple un muon de 1 GeV parcourra en moyenne 6 km dans l'atmosphère et qu'un muon de 10 GeV parcourra près de 63 km. De plus, en pleine nuit, le soleil étant de l'autre coté de la terre, uniquement les muons de hautes énergies pourront traverser la terre et donc être détectés par notre expérience. Une diminution du flux muonique est donc prévisible durant la nuit. Nous avons essayé de démontrer cela en ajoutant dans notre code Quartus un prise de l'heure, des minutes et  des secondes à laquelle un évènement à été collecté et nous avons pu en faire un histogramme. Le nombre d'évènements total collectés pour cette mesure étaient de 13462. La Fig. \ref{fig:oscillation_jour_cuivre} nous présente ces résultats.
+Une deuxième thématique abordée durant ce travail pratique à été la variation du flux muonique en fonction de l'heure dans une journée. Nous cherchons à déterminer si l'origine du flux muonique est solaire ou est de provenance cosmique. Si les muons sont crée par le soleil, alors,une variation jour-nuit pourrait être observée. 
+La terre étant très proche du soleil, celui-ci pourrait être la principale source de muons détectés sur la terre et l'isotropie cosmologique (c'est-à-dire qu'il n'existe pas de direction privilégiée pour une observation) pourait être écartée.
+Nous savons que par exemple un muon de 1 GeV parcourra en moyenne 6 km dans l'atmosphère et qu'un muon de 10 GeV parcourra près de 63 km. De plus, en pleine nuit, le soleil étant de l'autre coté de la terre, uniquement les muons de hautes énergies pourront traverser la terre et donc être détectés par notre expérience. Une diminution du flux muonique est donc prévisible durant la nuit. Nous avons essayé de démontrer cela en ajoutant dans notre code Quartus un prise de l'heure, des minutes et  des secondes à laquelle un évènement à été collecté et nous avons pu en faire un histogramme. Le nombre d'évènements total collectés pour cette mesure étaient de 13462. La Fig. \ref{fig:oscillation_jour_cuivre} nous présente ces résultats avec la partie du dessus représente les évènements obtenus par coïncidence des deux PMs du dessus alors que le graphique du dessous présente les résultats obtenus par coïncidence des PMs du dessous. L'axe des abscisses va 0 à 1440 minutes représentant le nombre de minutes en une journée ($24\cdot60=1440$) et l'axe des ordonnées représente le comptage par minute. La Fig. \ref{fig:oscillation_jour_cuivre_total} illustre les résultats accumulés sur une semaine. Les deux figures montrent qu'il y à bien des oscillations du flux mais les régressions sinusoïdale appliquée sur les données ne sont pas synchronisées avec le cycle jour/nuit et celles-ci sont juste du bruit.  Nous pouvons donc en conclure qu'il n'y a pas changement mesurable de flux cosmique entre le jour et la nuit (ils ne sont pas crée par le soleil). Les muons sont de nature cosmique avec une direction isotrope.
 
 \begin{figure}[htpb!]
     \centering
     \includegraphics[width=0.8\textwidth]{graphiques/experience1/cuivre/OSCILLATION_JOUR_CUIVRE.png}
-    \caption{Résultats Comptage pour la plaque de cuivre en fonction de l'heure en une journée. Il est difficile d'obtenir un résultat concluant.}
+    \caption{Résultats du comptage pour la plaque de cuivre en fonction de l'heure en une journée. On n'observe pas de fluctuation jour/nuit.}
     \label{fig:oscillation_jour_cuivre}
 \end{figure}
-
-Sur la Fig. \ref{fig:oscillation_jour_cuivre}, la partie du dessus représente les évènements obtenus par coïncidence des deux PMs du dessus alors que le graphique du dessous présente les résultats obtenus par coïncidence des PMs du dessous. L'axe des abscisses va 0 à 1440 minutes représentant le nombre de minutes en une journée ($24\cdot60=1440$) et l'axe des ordonnées représente le comptage par minute.
-
-La Fig. \ref{fig:oscillation_jour_cuivre_total} illustre les résultats accumulés sur une semaine.
 
 \begin{figure}[htpb!]
     \centering
     \includegraphics[width=0.8\textwidth]{graphiques/experience1/cuivre/oscillation_jour_cuivre_total_comptage.png}
-    \caption{Résultats Comptage pour la plaque de cuivre en fonction de l'heure en une journée. Données prises sur une semaine. Il est difficile d'obtenir un résultat concluant.}
+    \caption{Résultats du comptage pour la plaque de cuivre en fonction de l'heure en une journée. Données prises sur une semaine. Nous n'observons pas de correlation avec le soleil.}
     \label{fig:oscillation_jour_cuivre_total}
 \end{figure}
-
-Les Fig. \ref{fig:oscillation_jour_cuivre} et \ref{fig:oscillation_jour_cuivre_total} montrent qu'il y à bien des oscillations du flux mais malheureusement celles-ci ne suivent pas notre hypothèse de départ qui était que le flux diminue durant la nuit. Une régression sinusoïdale à été appliquée sur les deux graphiques mais malheureusement le résultat obtenus n'est pas celui espéré. Nous pouvons donc en conclure que l'hypothèse de base était fausse et qu'il n'y a pas changement mesurable de flux cosmique entre le jour et la nuit.
 
 
 \newpage
@@ -646,17 +642,14 @@ Le flux moyen de muons interagissant est de l'ordre de $(0.218+0.209)/2=0.2135$.
 
     En outre, il est facile de constater que les nombres de muons obtenus par secondes et par m$^{2}$ sont très similaires entre le cuivre et l'aluminium. Nous avons obtenus 0.218 muons$\cdot$s$^{-1}\cdot$m$^{2}$ pour le cuivre et 0.209 muons$\cdot$s$^{-1}\cdot$m$^{2}$ pour l'aluminium. En effet se sont deux valeurs très proche. Ceci est très intéressant car nous pouvons alors affirmer que la réussite de l'expérience ne dépend pas forcement du type de matériel que nous choisissons (Cuivre, Aluminium, etc...) mais au contraire, que celle-ci, dépend du lieu dans lequel on se trouve pour réaliser l'expérience. Par exemple, faire ce type d'expériences sur le toit de l'université (où se situe le télescope, au dessus de science 2) aurait été plus intéressant. Ceci aurait pu nous amener à des résultats plus précis. 
 
+\begin{comment}
 \subsubsection{Relation temps de demie-vie et masse du muon}
-
-Dans le cours de M. Bravar nous avons pu voir que la masse du muon est liée au temps de demie-vie de celui-ci: voir Éq. \ref{equ_time_mass_muon} représentant la désintégration du muon dans nos deux plaque. Cette équation est issue du slide numéro 7, page 10 du cous de PPA2.
+Dans le cours de M. Bravar nous avons pu voir que la masse du muon est liée au temps de demie-vie de celui-ci: voir Éq. \ref{equ_time_mass_muon} représentant la désintégration du muon dans nos deux plaque. Cette équation est issue du slide numéro 7, page 10 du cours de PPA2.
 \begin{equation}
 \Gamma\left(\mu^{+} \rightarrow e^{+} \overline{v}_{\mu} v_{e}\right)=\frac{G_{F}^{2}}{192 \pi^{2}} m_{\mu}^{5} \propto G_{F}^{2}\cdot m_{\mu}^{5} 
 \label{equ_time_mass_muon}
 \end{equation}
-
 Si la constante de Fermi $G_{F}$ est considérée comme connue et valant $G_{F}=1.16637\pm0.00001\cdot10^{-5} \text{GeV}^{-2}$, nous pouvons alors déduire de nos résultats d'expérience, la valeur de la masse du muon. En voici les résultats obtenus:
-
-
 \begin{center}
 \begin{tabular}{ll}
     Matériel & $m_{\mu}$ MeV\\
@@ -666,26 +659,25 @@ Si la constante de Fermi $G_{F}$ est considérée comme connue et valant $G_{F}=
     PDG & 105.7 $\pm$ 3.8$\times10^{-6}$ \\
 \end{tabular}
 \end{center}
-
 Les résultats sont approximatifs mais restent proches de la valeur du PDG. Ceci est très intéressant et confirme que l'on peut utiliser notre expérience pour calculer la masse du muon. Cependant nous constatons quand même que la valeur obtenue à une erreur relativement élevée en comparaison avec celle de la valeur du PDG. 
+\end{comment}
 
 \subsubsection{Constante de Fermi}
-
 Pour vérifier la valeur de la constante de Fermi $G_{F}$, nous pouvons utiliser la formule suivante:
-
 \[ G_{F} =8\sqrt{\frac{3\pi^{3}}{m_{\mu}^{5}\tau_{\mu}}} \]
-
 où $m_{\mu}=0.105$ GeV est la masse du muon.
+Si on utilise la valeur expérimental du cuivre et de l'aluminium du temps de vie du muon $\tau_{\mu}=2.17\times10^{-6} \text{ s}$ et qu'on la convertis en unités naturelle en utilisant que 1 GeV$^{-1}\rightarrow6.58\times10^{-25}$ s on obtient:
 
-Si on utilise la valeur théorique du temps de vie du muon $\tau_{\mu}=2.2\times10^{-6} \text{ s}$ et qu'on la convertis en unités naturelle en utilisant que 1 GeV$^{-1}\rightarrow2.2\times10^{-25}$ s on obtient:
+\[ \tau_{\mu_{Cuivre}}=3.29\times10^{18}\,\text{GeV}^{-1}\]
+\[ \tau_{\mu_{Alu}}=2.99\times10^{18}\,\text{GeV}^{-1}\]
 
-\[ \tau_{\mu}=3.34\times10^{18}\,\text{GeV}^{-1}\]
+Et on trouve comme valeur pratique pour le Cuivre:
 
-Et on trouve comme valeur pratique
+\[ G_{F_{Cuivre}}=1.19\times10^{-5}\,\text{GeV}^{-2}\]
+\[ G_{F_{Alu}}=1.25\times10^{-5}\,\text{GeV}^{-2}\]
 
-\[ G_{F}=1.18\times10^{-5}\,\text{GeV}^{-2}\]
+qui sont des valeurs proche de la valeur du PDG: $G_{F}=1.17\times10^{-5}\,\text{GeV}^{-2}$ avec une erreur relative de  1.7\% pour le cuivre et de 6.8\% pour l'aluminium.
 
-qui est proche de la valeure théorique $G_{F}=1.17\times10^{-5}\,\text{GeV}^{-2}$ avec un écart relatif $\epsilon<1\%$.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Améliorations %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -793,7 +785,7 @@ De la même manière que pour la première expérience, nous constatons que les 
 \subsection{Mesure du bruit de fond}
 
 Durant cette expérience, les erreurs systématiques ont été traitées en essayant de mesurer le bruit de fond du nombre de muons. 
-Un forçage sur la séparation des impulsions des deux paires de PMs à été réalisé. Pour cela, un retard de 50 ns  à été installé en utilisant deux DELAY FE 290. (Ce boîtier contient simplement des câbles de différentes longueurs qui retardent le signal). Sur une mesure de plus de 73 heures, un taux de 0.3 muons/h de bruit de fond à pu être détecté Pour la suite, il est évident que ce taux devra être soustrait à l'intégralité des mesures effectuées.
+Une séparation des impulsions des deux paires de PMs à été réalisé. Pour cela, un retard de 50 ns  à été installé en utilisant deux DELAY FE 290. (Ce boîtier contient simplement des câbles de différentes longueurs qui retardent le signal). Sur une mesure de plus de 73 heures, un taux de 0.3 muons/h de bruit de fond à pu être détecté Pour la suite, il est évident que ce taux devra être soustrait à l'intégralité des mesures effectuées.
 
 
 \subsection{Flux des muons cosmiques et dépendance avec l'angle zénithal}
@@ -806,12 +798,12 @@ Un forçage sur la séparation des impulsions des deux paires de PMs à été r�
 \end{figure}
 
 La Fig. \ref{fig:NumberMuonsPerHourPerAngle}, présente les résultats obtenus pour la mesure du flux de muons par heure dans une direction fixe (NE) et sur différents angles en orientant le télescope de la position verticale à la position horizontale. On remarque que le flux sur chaque paires de PM est beaucoup plus important (3 ordres de grandeurs) que le flux combiné.
-Ce résultats est cohérent. Les PMs étant séparés en $1\&2 et 3\&4$ sur chaque extrémités de la structure, il en va de soit que le nombre de muons traversant l'une ou l'autre est forcément plus grand que traversant les deux. Les résultats montrent que seulement environ 2,5\% traversent les 4 PMs. Ceci sur la totalité des muons détectés, à savoir, soit uniquement par les PMs 1\&2, soit uniquement par les PMs 3\&4 soit par les 4.
+Ce résultats est cohérent. Les PMs étant séparés en 1\&2 et 3\&4 sur chaque extrémités de la structure, il en va de soit que le nombre de muons traversant l'une ou l'autre est forcément plus grand que traversant les deux. Les résultats montrent que seulement environ 2,5\% traversent les 4 PMs. Ceci sur la totalité des muons détectés, à savoir, soit uniquement par les PMs 1\&2, soit uniquement par les PMs 3\&4 soit par les 4.
 
-En prenant en considération le fait que l'angle d'approche induit par la géométrie de notre télescope à muons est petit ainsi que le faite que les résultats PM 1\&2 et PM 3\&4, séparément, soient élevés, nous comprenons que les muons ne viennent pas d'une unique direction mais proviennent de directions multiples. Cette petite analyse permet de montrer de manière intuitive que les muons cosmiques ont des trajectoires isotropiquees.
+En prenant en considération le fait que l'angle d'approche induit par la géométrie de notre télescope à muons est petit ainsi que le faite que les résultats PM 1\&2 et PM 3\&4, séparément, soient élevés, nous comprenons que les muons ne viennent pas d'une unique direction mais proviennent de directions multiples. Cette analyse permet de montrer de manière intuitive que les muons cosmiques ont des trajectoires isotropiquees.
 
 La courbe orange sur la figure numéro \ref{fig:NumberMuonsPerHourPerAngle} met en avant le flux muonique par heure en fonction de l'inclinaison du télescope.
- Une décroissance peut être observée.  Entre 0 et 70 degrés, les résultats montrent une diminution d'un facteur de 10 du flux muonique. Ceci prouve que le flux muonique suit un comportement négatif \footnote{Par le terme "comportement négatif", nous entendant par là que l'éventuelle fonction utilisée comme fitting aurait une pente négative entre 0 et 80 degrés.} et donc que celui-ci diminue en fonction de l'augmentation de l'angle. Nous pouvons alors dans un premier temps valider l'hypothèse qui stipulait que le flux muonique varie en fonction de la distance qu'un muon voyage dans l'atmosphère avant d'arriver en contact avec notre détecteur. (Plus la couche atmosphérique traversée par celui-ci est grosse plus il aura de chance d'interagir avec celle-ci). 
+ Une décroissance peut être observée: entre 0 et 70 degrés, les résultats montrent une diminution d'un facteur de 10 du flux muonique. Ceci prouve que le flux muonique suit un comportement négatif \footnote{Le fit a une pente négative entre 0 et 80 degrés.} et donc que celui-ci diminue en fonction de l'augmentation de l'angle. Dans un premier temps, nous validons l'hypothèse qui stipulait que le flux muonique varie en fonction de la distance qu'un muon voyage dans l'atmosphère avant d'arriver en contact avec notre détecteur. (Plus la couche atmosphérique traversée par celui-ci est grosse plus il aura de chance d'interagir avec celle-ci). 
  
  En regardant avec plus de détails les résultats obtenus, il est maintenant intéressant de comprendre le comportement "mathématique" de cette diminution en y appliquant un fitting. Toutefois un manque de donnée pour un angle supérieur à 70 degrés est présent.\footnote{En effet, le cosinus carré varie plus rapidement entre 70 et 90 degrés. Ce qui rend nos résultats vrai qu'à moitié. Car nous n'avons pas assez de données pour confirmer que ceux-ci suivent bien un comportement de type cosinus carré.} En nous basant sur la théorie du flux muonique ainsi que les expériences réalisées dans le passé, les résultats doivent suivre une décroissance propositionnelle au cosinus carré de l'angle, hors, avec les résultats obtenus, il est difficile de confirmer avec exactitude que ceux-ci suivent bien se type de décroissance. En effet, la pente du cosinus au carré diminue fortement entre 70 et 90 degrés. C'est pourquoi il aurait été intéressant de prendre des données au délà de 70 degrés. Toutefois, en appliquant un fitting (en utilisant la méthode des moindre carré) en cosinus carré, les résultats obtenus pour un angle inférieur à 70 degrés sont très proche de celui-ci voir carrément sur la courbe. Ils sont donc bon à prendre et permettent de confirmer qu'en dessous de 70 degrés, le comportement du flux muonique se comporte comme un cosinus au carré.
  En ce qu'il concerne l'erreur vertical sur le nombres de muons par heures, la formule ci-dessous à été appliquée:
